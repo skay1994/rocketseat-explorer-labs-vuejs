@@ -15,7 +15,7 @@ describe("Card Component Tests", function () {
     expect(ccInfo.find(".cc-expiration .value").text()).toContain("02/32");
     expect(ccInfo.find(".cc-security .value").text()).toContain("123");
     expect(ccInfo.find(".cc-extra img").attributes()["src"]).toContain(
-      "src/assets/svgs/cc-chip.svg"
+      "/assets/svgs/cc-chip.svg"
     );
   });
 
@@ -68,9 +68,7 @@ describe("Card Component Tests", function () {
     const color1 = wrapper.find(".cc-bg svg > g g:nth-child(1) path");
     const color2 = wrapper.find(".cc-bg svg > g g:nth-child(2) path");
 
-    expect(logo.attributes()["src"]).toContain(
-      "src/assets/svgs/cc-default.svg"
-    );
+    expect(logo.attributes()["src"]).toContain("/assets/svgs/cc-default.svg");
     expect(color1.attributes("fill"), colors.default[0]);
     expect(color2.attributes("fill"), colors.default[1]);
   });
@@ -84,7 +82,7 @@ describe("Card Component Tests", function () {
     const color1 = wrapper.find(".cc-bg svg > g g:nth-child(1) path");
     const color2 = wrapper.find(".cc-bg svg > g g:nth-child(2) path");
 
-    expect(logo.attributes()["src"]).toContain("src/assets/svgs/cc-visa.svg");
+    expect(logo.attributes()["src"]).toContain("/assets/svgs/cc-visa.svg");
     expect(color1.attributes("fill"), colors.visa[0]);
     expect(color2.attributes("fill"), colors.visa[1]);
   });
@@ -99,7 +97,7 @@ describe("Card Component Tests", function () {
     const color2 = wrapper.find(".cc-bg svg > g g:nth-child(2) path");
 
     expect(logo.attributes()["src"]).toContain(
-      "src/assets/svgs/cc-mastercard.svg"
+      "/assets/svgs/cc-mastercard.svg"
     );
     expect(color1.attributes("fill"), colors.mastercard[0]);
     expect(color2.attributes("fill"), colors.mastercard[1]);
